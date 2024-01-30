@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+    <style>
+        progress {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Progress element example</h1>
+
+    <progress value="33" max="100"></progress>
+    <p>Click to change progress:</p>
+    <button onclick="next()">Click me</button>
+
+    <script>
+        const pr = document.querySelector('progress');
+
+        function next() {
+            if (pr.value >= 100)
+                pr.value = 0;
+            else
+                pr.value += 5;
+        }
+    </script>
+</body>
+
+</html>
